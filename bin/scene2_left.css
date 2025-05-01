@@ -1,0 +1,22 @@
+.button{
+    -fx-background-color:linear-gradient(to left, #00458e , #03c5c5 );
+    /* -fx-background-color: linear-gradient(to left, #0b0a0a,#0c3d71);    */
+    -fx-background-radius:30 0 0 30;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+    -fx-font-size: large;
+    -fx-text-fill:#ffffff;
+}
+.button:hover{
+    -fx-background-color:#03c5c5;
+    -fx-background-radius:30 0 0 30;
+    -fx-text-fill:white ;
+}
+.button:pressed{
+    -fx-background-color:#03c5c5;
+    -fx-background-radius:30 0 0 30;
+    -fx-text-fill:white ;
+}
+#leftbar{
+    -fx-background-color: linear-gradient(to right,#000328,#00458e);
+}

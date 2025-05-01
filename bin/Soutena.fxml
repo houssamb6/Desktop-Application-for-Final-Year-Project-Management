@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="anc2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="154.0" prefWidth="460.0" stylesheets="@noteSoutenance.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlerSoutenance">
+   <children>
+      <Label layoutX="33.0" layoutY="29.0" prefHeight="38.0" prefWidth="397.0" text="Evaluation Soutenance" textAlignment="CENTER" />
+      <TextField fx:id="notee" layoutX="166.0" layoutY="86.0" />
+      <Label fx:id="note" layoutX="14.0" layoutY="80.0" prefHeight="38.0" prefWidth="178.0" text="Note:" />
+      <AnchorPane fx:id="evalue" layoutX="322.0" layoutY="84.0" onMouseClicked="#setnot" prefHeight="26.0" prefWidth="50.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="29.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/verifier%20(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="msg" layoutX="97.0" layoutY="121.0" prefHeight="38.0" prefWidth="286.0" />
+   </children>
+</AnchorPane>

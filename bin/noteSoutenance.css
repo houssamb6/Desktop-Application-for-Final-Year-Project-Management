@@ -1,0 +1,32 @@
+#anc2{
+    -fx-background-color: linear-gradient(to top,#000328,#00458e);
+}
+.label{
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+    -fx-font-size:xx-large;
+    -fx-text-fill:#69e8f6;
+    -fx-alignment: center;
+}
+#note{
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial Black";
+    -fx-font-size:x-large;
+    -fx-text-fill:#ffffff;
+    -fx-alignment: center;
+}
+#evalue:hover{
+    -fx-background-color:rgba(219, 192, 192, 0.5);
+    -fx-background-radius:50;
+}
+.alert{
+    -fx-text-fill:rgb(214, 7, 7);
+    -fx-font-size: medium;
+    -fx-alignment: center;
+}
+.rka7{
+    -fx-text-fill:rgb(5, 206, 5);
+    -fx-alignment: center;
+    -fx-font-size: medium;
+
+}

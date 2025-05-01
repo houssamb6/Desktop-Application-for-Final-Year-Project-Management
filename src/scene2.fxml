@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1217.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlerEtudient">
+   <children>
+      <BorderPane prefHeight="702.0" prefWidth="1217.0">
+         <left>
+            <AnchorPane fx:id="leftbar" prefHeight="710.0" prefWidth="248.0" stylesheets="@scene2_left.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="buttonEtu" layoutX="84.0" layoutY="205.0" mnemonicParsing="false" onAction="#moveE" prefHeight="70.0" prefWidth="230.0" text="Etudient" />
+                  <Button fx:id="buttonHome" layoutX="84.0" layoutY="114.0" mnemonicParsing="false" onAction="#moveH" prefHeight="70.0" prefWidth="230.0" text="Accueil" />
+                  <Button fx:id="buttonEnsei" layoutX="84.0" layoutY="294.0" mnemonicParsing="false" onAction="#moveEnsei" prefHeight="70.0" prefWidth="230.0" text="Enseignant" />
+                  <Button fx:id="buttonEnca" layoutX="84.0" layoutY="387.0" mnemonicParsing="false" onAction="#moveInvité" prefHeight="70.0" prefWidth="230.0" text="        Encadreur_societe" />
+                  <Button fx:id="buttomTimee" layoutX="84.0" layoutY="564.0" mnemonicParsing="false" onAction="#moveSoutenance" prefHeight="70.0" prefWidth="230.0" text="Soutenance" />
+                  <Button fx:id="buttonPFEe" layoutX="84.0" layoutY="475.0" mnemonicParsing="false" onAction="#movePFE" prefHeight="70.0" prefWidth="230.0" text="PFE" />
+                  <ImageView fitHeight="48.0" fitWidth="40.0" layoutX="106.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/academic.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="34.0" fitWidth="37.0" layoutX="109.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/teaching%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="107.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/diploma.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="108.0" layoutY="581.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/schedule%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="102.0" layoutY="164.0" size="3.5em" wrappingWidth="49.428571701049805" />
+                  <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="105.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/president.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="backgroundAnc" prefHeight="702.0" prefWidth="929.0" stylesheets="@sceneRight.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="anc1" layoutX="-2.0" layoutY="13.0" prefHeight="679.0" prefWidth="895.0">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="598.0" layoutX="175.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo2.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="cadre1" layoutX="45.0" layoutY="113.0" prefHeight="115.0" prefWidth="260.0">
+                           <children>
+                              <Label fx:id="label1" alignment="CENTER" layoutX="51.0" layoutY="14.0" prefHeight="38.0" prefWidth="158.0" text="Etudiants" />
+                              <Label fx:id="label11" alignment="CENTER" layoutX="88.0" layoutY="66.0" prefHeight="38.0" prefWidth="84.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="cadre1" layoutX="609.0" layoutY="113.0" prefHeight="115.0" prefWidth="260.0">
+                           <children>
+                              <Label fx:id="label1" alignment="CENTER" contentDisplay="CENTER" layoutX="46.0" layoutY="14.0" prefHeight="38.0" prefWidth="168.0" text="PFE" textOverrun="CENTER_ELLIPSIS" />
+                              <Label fx:id="label3" alignment="CENTER" layoutX="88.0" layoutY="65.0" prefHeight="38.0" prefWidth="84.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="cadre1" layoutX="327.0" layoutY="113.0" prefHeight="115.0" prefWidth="260.0">
+                           <children>
+                              <Label fx:id="label1" alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="38.0" prefWidth="258.0" text="Enseignants" />
+                              <Label fx:id="label2" alignment="CENTER" layoutX="88.0" layoutY="65.0" prefHeight="38.0" prefWidth="84.0" />
+                           </children>
+                        </AnchorPane>
+                        <PieChart fx:id="pieChart" layoutX="482.0" layoutY="197.0" legendVisible="false" prefHeight="300.0" prefWidth="386.0" />
+                        <PieChart fx:id="pieChart1" layoutX="45.0" layoutY="197.0" legendVisible="false" prefHeight="300.0" prefWidth="386.0" />
+                        <BarChart fx:id="barChart" layoutX="15.0" layoutY="466.0" prefHeight="212.0" prefWidth="859.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc2" layoutX="-6.0" layoutY="9.0" prefHeight="683.0" prefWidth="899.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="16.0" layoutY="58.0" prefHeight="338.0" prefWidth="830.0">
+                           <children>
+                              <TableView fx:id="tableViewEtudient" layoutX="16.0" layoutY="13.0" onMouseClicked="#mouseClickeddd" prefHeight="322.0" prefWidth="835.0">
+                                 <columns>
+                                    <TableColumn fx:id="cinEtudient" prefWidth="94.40003204345703" text="cin" />
+                                    <TableColumn fx:id="nomEtudient" minWidth="0.0" prefWidth="95.20001220703125" text="nom" />
+                                    <TableColumn fx:id="prenomEtudient" prefWidth="113.60003662109375" text="prenom" />
+                                    <TableColumn fx:id="phoneEtudient" prefWidth="103.199951171875" text="telephone" />
+                                    <TableColumn fx:id="anniversaireEtudient" prefWidth="152.80001831054688" text="anniversaire" />
+                                    <TableColumn fx:id="sexeEtudient" prefWidth="52.800048828125" text="sexe" />
+                                    <TableColumn fx:id="etudeEtudiant" prefWidth="122.39996337890625" text="formation" />
+                                    <TableColumn fx:id="filièreEtudiant" prefWidth="110.4000244140625" text="filière" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="EtudientSearch" alignment="CENTER" layoutX="302.0" layoutY="26.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
+                        <TextField fx:id="setcin_label" layoutX="114.0" layoutY="437.0" />
+                        <Label layoutX="48.0" layoutY="443.0" text="cin" />
+                        <TextField fx:id="setnom_label" layoutX="114.0" layoutY="475.0" />
+                        <Label layoutX="43.0" layoutY="479.0" text="nom" />
+                        <TextField fx:id="setprenom_label" layoutX="114.0" layoutY="514.0" />
+                        <Label layoutX="43.0" layoutY="520.0" text="prenom" />
+                        <Label layoutX="45.0" layoutY="560.0" text="gender" />
+                        <TextField fx:id="setphone_label" layoutX="487.0" layoutY="438.0" />
+                        <Label layoutX="328.0" layoutY="443.0" text="telephone" />
+                        <Label layoutX="328.0" layoutY="478.0" text="date de naissance" />
+                        <Label layoutX="328.0" layoutY="520.0" text="etude" />
+                        <Label layoutX="328.0" layoutY="560.0" text="filière" />
+                        <Button fx:id="button_ajouter" layoutX="725.0" layoutY="430.0" mnemonicParsing="false" onAction="#ajouterEtudiant" prefHeight="50.0" prefWidth="115.0" text="ajouter" />
+                        <Button fx:id="button_update" layoutX="725.0" layoutY="492.0" mnemonicParsing="false" onAction="#updateEtudiant" prefHeight="50.0" prefWidth="115.0" text="update" />
+                        <Button fx:id="button_delete" layoutX="725.0" layoutY="554.0" mnemonicParsing="false" onAction="#deleteEtudiant" prefHeight="50.0" prefWidth="115.0" text="delete" />
+                        <Button fx:id="button_clear" layoutX="725.0" layoutY="618.0" mnemonicParsing="false" onAction="#clearEtudiant" prefHeight="50.0" prefWidth="115.0" text="clear" />
+                        <ChoiceBox fx:id="setEtude" layoutX="487.0" layoutY="516.0" prefHeight="31.0" prefWidth="193.0" stylesheets="@secenelabel.css" />
+                        <ChoiceBox fx:id="setfilière" layoutX="486.0" layoutY="555.0" prefHeight="31.0" prefWidth="194.0" stylesheets="@secenelabel.css" />
+                        <DatePicker fx:id="setanniversaire_label" layoutX="487.0" layoutY="475.0" prefHeight="34.0" prefWidth="194.0" />
+                        <RadioButton fx:id="HButton" layoutX="137.0" layoutY="562.0" mnemonicParsing="false" text="H">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gender" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="FButton" layoutX="198.0" layoutY="562.0" mnemonicParsing="false" text="F" toggleGroup="$gender" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="308.0" layoutY="51.0" selectionEnd="1" selectionFill="BLACK" size="2em" />
+                        <Label layoutX="32.0" layoutY="32.0" prefHeight="26.0" prefWidth="148.0" text="Etudiant:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="msg" layoutX="97.0" layoutY="618.0" prefHeight="22.0" prefWidth="553.0" />
+                        <Label fx:id="msg1" layoutX="116.0" layoutY="628.0" prefHeight="22.0" prefWidth="553.0" />
+                     </children>
+                  </AnchorPane>
+                  
+                                                      <AnchorPane fx:id="anc3" layoutX="-7.0" layoutY="7.0" prefHeight="686.0" prefWidth="902.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="16.0" layoutY="58.0" prefHeight="338.0" prefWidth="830.0" style="-fx-border-radius: 10;">
+                           <children>
+                              <TableView fx:id="tableViewEnseignant" layoutX="10.0" onMouseClicked="#mouseClickedddEnsei" prefHeight="321.0" prefWidth="827.0">
+                                 <columns>
+                                    <TableColumn fx:id="cinEnseignant" prefWidth="61.06670951843262" text="cin" />
+                                    <TableColumn fx:id="nomEnseignant" minWidth="0.0" prefWidth="95.46668243408203" text="nom" />
+                                    <TableColumn fx:id="prenomEnseignant" prefWidth="114.4000244140625" text="prenom" />
+                                    <TableColumn fx:id="phoneEnseignant" prefWidth="86.93328857421875" text="telephone" />
+                                    <TableColumn fx:id="specialiteEnseignant" prefWidth="86.93328857421875" text="specialite" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="searchFieldEnseignant" alignment="CENTER" layoutX="300.0" layoutY="21.0" prefHeight="26.0" prefWidth="250.0" promptText="search">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </TextField>
+                        <TextField fx:id="setcinEn" layoutX="149.0" layoutY="437.0" />
+                        <Label layoutX="60.0" layoutY="441.0" text="cin" />
+                        <TextField fx:id="setnomEn" layoutX="149.0" layoutY="477.0" />
+                        <Label layoutX="60.0" layoutY="479.0" text="nom" />
+                        <TextField fx:id="setprenomEn" layoutX="149.0" layoutY="516.0" />
+                        <Label layoutX="60.0" layoutY="518.0" text="prenom" />
+                        <TextField fx:id="setphoneEn" layoutX="149.0" layoutY="553.0" />
+                        <Label layoutX="54.0" layoutY="557.0" text="telephone" />
+                        <Button layoutX="435.0" layoutY="426.0" mnemonicParsing="false" onAction="#ajouterEnseignant" prefHeight="50.0" prefWidth="115.0" text="ajouter" />
+                        <Button layoutX="435.0" layoutY="503.0" mnemonicParsing="false" onAction="#updateEnseignant" prefHeight="50.0" prefWidth="115.0" text="update" />
+                        <Button layoutX="585.0" layoutY="426.0" mnemonicParsing="false" onAction="#deleteEnseignant" prefHeight="50.0" prefWidth="115.0" text="delete" />
+                        <Button layoutX="585.0" layoutY="506.0" mnemonicParsing="false" onAction="#clearEnseignant" prefHeight="50.0" prefWidth="115.0" text="clear" />
+                        <Label layoutX="58.0" layoutY="597.0" text="specialite" />
+                        <TextField fx:id="setspecialiteEn" layoutX="149.0" layoutY="593.0" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="306.0" layoutY="46.0" selectionEnd="1" size="2em" />
+                        <Label layoutX="30.0" layoutY="22.0" prefHeight="26.0" prefWidth="148.0" text="Enseignant:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="msg3" layoutX="393.0" layoutY="608.0" prefHeight="22.0" prefWidth="442.0" />
+                        <Label fx:id="msg2" layoutX="393.0" layoutY="584.0" prefHeight="22.0" prefWidth="356.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc4" layoutX="-7.0" layoutY="7.0" prefHeight="686.0" prefWidth="902.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="16.0" layoutY="58.0" prefHeight="338.0" prefWidth="830.0" style="-fx-border-radius: 10;">
+                           <children>
+                              <TableView fx:id="tableViewInvité" layoutX="10.0" onMouseClicked="#mouseClickedddInvite" prefHeight="321.0" prefWidth="827.0">
+                                 <columns>
+                                    <TableColumn fx:id="cinInvité" prefWidth="141.59998321533203" text="cin" />
+                                    <TableColumn fx:id="nomInvité" minWidth="0.0" prefWidth="151.20004272460938" text="nom" />
+                                    <TableColumn fx:id="prenomInvité" prefWidth="187.99996948242188" text="prenom" />
+                                    <TableColumn fx:id="phoneInvité" prefWidth="172.0" text="telephone" />
+                                    <TableColumn fx:id="societeInvite" prefWidth="169.5999755859375" text="societe" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="searchFieldInvite" alignment="CENTER" layoutX="300.0" layoutY="22.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
+                        <TextField fx:id="setcinInvite" layoutX="149.0" layoutY="437.0" />
+                        <Label layoutX="60.0" layoutY="441.0" text="cin" />
+                        <TextField fx:id="setnomInvite" layoutX="149.0" layoutY="477.0" />
+                        <Label layoutX="60.0" layoutY="479.0" text="nom" />
+                        <TextField fx:id="setprenomInvite" layoutX="149.0" layoutY="516.0" />
+                        <Label layoutX="60.0" layoutY="518.0" text="prenom" />
+                        <TextField fx:id="setphoneInvite" layoutX="149.0" layoutY="553.0" />
+                        <Label layoutX="54.0" layoutY="557.0" text="telephone" />
+                        <Button layoutX="435.0" layoutY="426.0" mnemonicParsing="false" onAction="#ajouterGuest" prefHeight="50.0" prefWidth="115.0" text="ajouter" />
+                        <Button layoutX="435.0" layoutY="503.0" mnemonicParsing="false" onAction="#updateGuest" prefHeight="50.0" prefWidth="115.0" text="update" />
+                        <Button layoutX="585.0" layoutY="426.0" mnemonicParsing="false" onAction="#deleteGuest" prefHeight="50.0" prefWidth="115.0" text="delete" />
+                        <Button layoutX="585.0" layoutY="506.0" mnemonicParsing="false" onAction="#clearGuest" prefHeight="50.0" prefWidth="115.0" text="clear" />
+                        <Label layoutX="58.0" layoutY="597.0" text="societe" />
+                        <TextField fx:id="setsocieteInvite" layoutX="149.0" layoutY="593.0" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="307.0" layoutY="47.0" selectionEnd="0" size="2em" />
+                        <Label layoutX="30.0" layoutY="28.0" text="Encadreur Invité:" />
+                        <Label fx:id="msg4" layoutX="407.0" layoutY="585.0" prefHeight="22.0" prefWidth="356.0" />
+                        <Label fx:id="msg5" layoutX="407.0" layoutY="616.0" prefHeight="22.0" prefWidth="356.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc6" layoutX="-8.0" layoutY="8.0" prefHeight="685.0" prefWidth="904.0" visible="false">
+                     <children>
+                        <TableView fx:id="tableViewJury" layoutX="20.0" layoutY="68.0" onMouseClicked="#mouseClickedddJury" prefHeight="350.0" prefWidth="868.0">
+                           <columns>
+                              <TableColumn fx:id="id_Jury" prefWidth="48.00006103515625" text="Jury" />
+                              <TableColumn fx:id="id_president" minWidth="0.0" prefWidth="88.800048828125" text="president" />
+                              <TableColumn fx:id="id_Rapporteur" prefWidth="104.79995727539062" text="Rapporteur" />
+                              <TableColumn fx:id="id_Examinateur" prefWidth="116.800048828125" text="Examinateur" />
+                              <TableColumn fx:id="id_invité" prefWidth="79.199951171875" text="Invité" />
+                              <TableColumn fx:id="details" prefWidth="79.199951171875" text="details" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane layoutX="26.0" layoutY="418.0" prefHeight="258.0" prefWidth="855.0">
+                           <children>
+                              <Label layoutX="68.0" layoutY="48.0" text="president:" />
+                              <Label layoutX="68.0" layoutY="86.0" text="Rapporteur:" />
+                              <Label layoutX="69.0" layoutY="125.0" text="Examinateur:" />
+                              <Button layoutX="581.0" layoutY="17.0" mnemonicParsing="false" onAction="#ajouterJury" prefHeight="50.0" prefWidth="115.0" text="ajouter" />
+                              <Button layoutX="581.0" layoutY="77.0" mnemonicParsing="false" onAction="#updateJury" prefHeight="50.0" prefWidth="115.0" text="update" />
+                              <Button layoutX="581.0" layoutY="192.0" mnemonicParsing="false" onAction="#clearFieldJury" prefHeight="50.0" prefWidth="115.0" text="clear" />
+                              <Button layoutX="581.0" layoutY="134.0" mnemonicParsing="false" onAction="#deleteJury" prefHeight="50.0" prefWidth="115.0" text="delete" />
+                              <Label layoutX="69.0" layoutY="168.0" text="Invité:" />
+                              <ComboBox fx:id="setPresident" editable="true" layoutX="210.0" layoutY="42.0" prefWidth="150.0" />
+                              <ComboBox fx:id="setExaminateur" editable="true" layoutX="210.0" layoutY="119.0" prefWidth="150.0" />
+                              <ComboBox fx:id="setRapporeteur" editable="true" layoutX="210.0" layoutY="80.0" prefWidth="150.0" />
+                              <ComboBox fx:id="setInvite" editable="true" layoutX="210.0" layoutY="161.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="searchFieldJury" alignment="CENTER" layoutX="313.0" layoutY="21.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="325.0" layoutY="46.0" size="2em" />
+                        <Label layoutX="30.0" layoutY="28.0" text="Jury" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc5" layoutX="-7.0" layoutY="13.0" prefHeight="678.0" prefWidth="900.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="598.0" layoutX="189.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo2.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="backgroundimage" layoutX="95.0" layoutY="191.0" prefHeight="354.0" prefWidth="710.0">
+                           <children>
+                              <AnchorPane fx:id="ancimagePFE" layoutX="55.0" layoutY="31.0" onMouseClicked="#movePfemouse" prefHeight="292.0" prefWidth="238.0">
+                                 <children>
+                                    <ImageView fitHeight="172.0" fitWidth="225.0" layoutX="33.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/mortarboard.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="31.0" layoutY="208.0" mnemonicParsing="false" onAction="#movePfe" prefHeight="47.0" prefWidth="176.0" text="PFE" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="ancimageJury" layoutX="416.0" layoutY="31.0" onMouseClicked="#moveJurymouse" prefHeight="292.0" prefWidth="231.0">
+                                 <children>
+                                    <ImageView fitHeight="172.0" fitWidth="225.0" layoutX="30.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/judge.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="28.0" layoutY="209.0" mnemonicParsing="false" onAction="#moveJury" prefHeight="46.0" prefWidth="176.0" text="Jury" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc7" layoutX="-8.0" layoutY="5.0" prefHeight="689.0" prefWidth="904.0" visible="false">
+                     <children>
+                        <TableView fx:id="tableViewPFE" layoutX="307.0" layoutY="68.0" onMouseClicked="#mouseClickedddPFE" prefHeight="615.0" prefWidth="568.0">
+                           <columns>
+                              <TableColumn fx:id="PFE" prefWidth="48.00006103515625" text="PFE" />
+                              <TableColumn fx:id="id_Etudiants" prefWidth="201.60000610351562" text="Etudiant(s)" />
+                              <TableColumn fx:id="id_EncadreurPFE" prefWidth="135.99993896484375" text="Encadreur" />
+                              <TableColumn fx:id="Projet" prefWidth="134.4000244140625" text="Projet" />
+                              <TableColumn fx:id="detailsPFE" prefWidth="40.0001220703125" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                        <AnchorPane layoutX="14.0" layoutY="67.0" prefHeight="617.0" prefWidth="291.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="37.0" text="Encadreur:" />
+                              <Label layoutX="14.0" layoutY="87.0" text="projet:" />
+                              <Button fx:id="ajouterPFE" layoutX="152.0" layoutY="309.0" mnemonicParsing="false" onAction="#ajouterPFE" prefHeight="50.0" prefWidth="115.0" text="ajouter" />
+                              <Button layoutX="25.0" layoutY="309.0" mnemonicParsing="false" onAction="#updatePFE" prefHeight="50.0" prefWidth="115.0" text="update" />
+                              <Button layoutX="25.0" layoutY="385.0" mnemonicParsing="false" onAction="#clearPFE" prefHeight="50.0" prefWidth="115.0" text="clear" />
+                              <Button layoutX="152.0" layoutY="385.0" mnemonicParsing="false" onAction="#deletePFE" prefHeight="50.0" prefWidth="115.0" text="delete" />
+                              <TextField fx:id="setProjet" layoutX="110.0" layoutY="81.0" prefHeight="34.0" prefWidth="158.0" />
+                              <RadioButton fx:id="group" layoutX="109.0" layoutY="125.0" mnemonicParsing="false" onAction="#afficheGroup" text="group">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="pfe" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="indiv" layoutX="188.0" layoutY="125.0" mnemonicParsing="false" onAction="#afficheindiv" text="indiv" toggleGroup="$pfe" />
+                              <Label layoutX="14.0" layoutY="123.0" text="PFE:" />
+                              <AnchorPane fx:id="groupPane" layoutX="1.0" layoutY="191.0" prefHeight="77.0" prefWidth="283.0" visible="false">
+                                 <children>
+                                    <Label fx:id="Etudiant2" layoutX="8.0" layoutY="22.0" text="Etudiant2" />
+                                    <ComboBox fx:id="setEtudiant2" layoutX="103.0" layoutY="20.0" prefWidth="150.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="indivPane" layoutX="-4.0" layoutY="145.0" prefHeight="45.0" prefWidth="279.0" visible="false">
+                                 <children>
+                                    <Label fx:id="Etudiant1" layoutX="14.0" layoutY="18.0" text="Etudiant1" />
+                                    <ComboBox fx:id="setEtudiant1" layoutX="106.0" layoutY="16.0" prefWidth="150.0" />
+                                 </children>
+                              </AnchorPane>
+                              <ComboBox fx:id="setEncadreurPFE" layoutX="109.0" layoutY="35.0" prefHeight="26.0" prefWidth="158.0" />
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="searchPFE" alignment="CENTER" layoutX="305.0" layoutY="24.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="315.0" layoutY="49.0" size="2em" />
+                        <Label layoutX="30.0" layoutY="28.0" text="PFE" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc8" layoutX="-2.0" layoutY="12.0" prefHeight="679.0" prefWidth="895.0" visible="false">
+                     <children>
+                        <AnchorPane fx:id="backgroundimage" layoutX="95.0" layoutY="191.0" prefHeight="354.0" prefWidth="710.0">
+                           <children>
+                              <AnchorPane fx:id="ancimagePlanification" layoutX="58.0" layoutY="31.0" onMouseClicked="#moveAjout" prefHeight="292.0" prefWidth="238.0">
+                                 <children>
+                                    <ImageView fitHeight="154.0" fitWidth="156.0" layoutX="45.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/schedule%20(2).png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="39.0" layoutY="209.0" mnemonicParsing="false" onAction="#moveAjoutt" prefHeight="47.0" prefWidth="160.0" text="Planification" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="ancimagevaluation" layoutX="416.0" layoutY="31.0" onMouseClicked="#moveEvaluation2" prefHeight="292.0" prefWidth="231.0">
+                                 <children>
+                                    <ImageView fitHeight="153.0" fitWidth="150.0" layoutX="46.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/checklist.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button layoutX="36.0" layoutY="207.0" mnemonicParsing="false" onAction="#moveEvaluation" prefHeight="46.0" prefWidth="160.0" text="Evaluation" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="75.0" fitWidth="598.0" layoutX="187.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/logo2.png" />
+                           </image>
+                        </ImageView>
+                        <AnchorPane fx:id="backgroundAncPlan" layoutX="210.0" layoutY="135.0" prefHeight="466.0" prefWidth="457.0" visible="false">
+                           <children>
+                              <Button layoutX="155.0" layoutY="357.0" mnemonicParsing="false" onAction="#ajouterSoutenance" prefHeight="62.0" prefWidth="148.0" text="ajouter" />
+                              <Label layoutX="82.0" layoutY="78.0" prefHeight="42.0" prefWidth="110.0" styleClass="SoutenLabel" text="PFE:" textFill="WHITE" />
+                              <Label layoutX="82.0" layoutY="125.0" prefHeight="45.0" prefWidth="111.0" styleClass="SoutenLabel" text="Jury:">
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <ComboBox fx:id="soutenancePFE" layoutX="214.0" layoutY="87.0" prefWidth="150.0" />
+                              <Label layoutX="82.0" layoutY="173.0" prefHeight="45.0" prefWidth="111.0" styleClass="SoutenLabel" text="Date:">
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <Label layoutX="82.0" layoutY="223.0" prefHeight="45.0" prefWidth="111.0" styleClass="SoutenLabel" text="hDebut:">
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <DatePicker fx:id="soutenanceDate" layoutX="214.0" layoutY="180.0" prefHeight="30.0" prefWidth="151.0" />
+                              <ComboBox fx:id="soutenanceJury" layoutX="214.0" layoutY="135.0" prefWidth="150.0" />
+                              <Label layoutX="82.0" layoutY="269.0" prefHeight="45.0" prefWidth="111.0" styleClass="SoutenLabel" text="Salle:">
+                                 <textFill>
+                                    <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </textFill>
+                              </Label>
+                              <ComboBox fx:id="soutenanceSalle" layoutX="214.0" layoutY="279.0" prefWidth="150.0" />
+                              <FontAwesomeIcon glyphName="CLOSE" layoutX="394.0" layoutY="55.0" onMouseClicked="#removeAjout" size="4em" wrappingWidth="49.428571701049805">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.046783626079559326" green="0.3684210479259491" blue="0.6315789222717285" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </FontAwesomeIcon>
+                              <ComboBox fx:id="soutenanceheure" layoutX="214.0" layoutY="233.0" prefWidth="150.0" />
+                              <Label fx:id="alert" layoutX="82.0" layoutY="324.0" prefHeight="22.0" prefWidth="284.0" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="anc9" layoutX="-7.0" layoutY="9.0" prefHeight="683.0" prefWidth="899.0" visible="false">
+                     <children>
+                        <AnchorPane layoutX="16.0" layoutY="58.0" prefHeight="338.0" prefWidth="830.0">
+                           <children>
+                              <TableView fx:id="tableViewSoutenance" layoutX="16.0" layoutY="13.0" onMouseClicked="#mouseClickeddd" prefHeight="543.0" prefWidth="835.0">
+                                 <columns>
+                                    <TableColumn fx:id="EtudaintsSoutenance" prefWidth="170.4000015258789" text="Etudiants" />
+                                    <TableColumn fx:id="titreDePFE" minWidth="0.0" prefWidth="152.0" text="Titre de PFE" />
+                                    <TableColumn fx:id="DateSoutenance" prefWidth="128.79998779296875" text="Date" />
+                                    <TableColumn fx:id="heureSoutenance" prefWidth="141.59994506835938" text="heure" />
+                                    <TableColumn fx:id="salleSoutenancePFE" prefWidth="128.79998779296875" text="salle" />
+                                    <TableColumn fx:id="notePFE" prefWidth="99.199951171875" text="note" />
+                                    <TableColumn fx:id="evaluer" prefWidth="40.800048828125" />
+                                 </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <TextField fx:id="EtudientSearch1" alignment="CENTER" layoutX="302.0" layoutY="26.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
+                        <FontAwesomeIcon glyphName="SEARCH" layoutX="308.0" layoutY="51.0" selectionEnd="1" selectionFill="BLACK" size="2em" />
+                        <Label layoutX="32.0" layoutY="32.0" prefHeight="26.0" prefWidth="148.0" text="Affichage:">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="msg1" layoutX="97.0" layoutY="618.0" prefHeight="22.0" prefWidth="553.0" />
+                        <Label fx:id="msg11" layoutX="116.0" layoutY="628.0" prefHeight="22.0" prefWidth="553.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</FlowPane>
