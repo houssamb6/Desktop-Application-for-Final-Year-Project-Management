@@ -2735,8 +2735,7 @@ public class ControlerEtudient implements  Initializable {
     private PieChart pieChart;
     @FXML
     private PieChart pieChart1;
-    @FXML 
-    private BarChart barChart;
+
     private int countIndiv(){
         int countindiv=0;
         connect=database.connectDb();
@@ -2875,24 +2874,7 @@ public class ControlerEtudient implements  Initializable {
             }
         pieChart1.setData(pieChartData);
     }
-    @SuppressWarnings("unchecked")
-    private void handleShowBarChar(){
-        CategoryAxis xAxis=new CategoryAxis();
-        xAxis.setLabel("Product");
 
-        NumberAxis yAxis =new NumberAxis();
-        yAxis.setLabel("quhkbjj");
-
-        XYChart.Series data=new XYChart.Series() ;
-        data.setName("Series 1");
-
-        data.getData().add(new XYChart.Data("soutenance planifier",12));
-        data.getData().add(new XYChart.Data("soutenance non planifier",13));
-        data.getData().add(new XYChart.Data("soutenance evaluer",40));
-        data.getData().add(new XYChart.Data("soutenance non evaluer",40));
-        barChart.setLegendVisible(false);
-        barChart.getData().add(data);
-    }
 
 
 

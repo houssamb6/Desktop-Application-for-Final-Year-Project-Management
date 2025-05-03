@@ -54,5 +54,3 @@ import javafx.stage.Stage;
                 }
             }
         }
-    
-    
