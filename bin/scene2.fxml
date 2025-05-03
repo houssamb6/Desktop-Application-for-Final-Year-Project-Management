@@ -19,7 +19,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
@@ -68,7 +67,7 @@
          <center>
             <AnchorPane fx:id="backgroundAnc" prefHeight="702.0" prefWidth="929.0" stylesheets="@sceneRight.css" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="anc1" layoutX="-2.0" layoutY="13.0" prefHeight="679.0" prefWidth="895.0" visible="false">
+                  <AnchorPane fx:id="anc1" layoutX="-2.0" layoutY="13.0" prefHeight="679.0" prefWidth="895.0">
                      <children>
                         <ImageView fitHeight="75.0" fitWidth="598.0" layoutX="194.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -143,7 +142,6 @@
                               <ToggleGroup fx:id="gender" />
                            </toggleGroup></RadioButton>
                         <RadioButton fx:id="FButton" layoutX="198.0" layoutY="562.0" mnemonicParsing="false" text="F" toggleGroup="$gender" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="308.0" layoutY="51.0" selectionEnd="1" selectionFill="BLACK" size="2em" />
                         <Label layoutX="32.0" layoutY="32.0" prefHeight="26.0" prefWidth="148.0" text="Etudiant:">
                            <font>
                               <Font size="24.0" />
@@ -191,7 +189,6 @@
                         <Button layoutX="585.0" layoutY="506.0" mnemonicParsing="false" onAction="#clearEnseignant" prefHeight="50.0" prefWidth="115.0" text="clear" />
                         <Label layoutX="58.0" layoutY="597.0" text="specialite" />
                         <TextField fx:id="setspecialiteEn" layoutX="149.0" layoutY="593.0" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="306.0" layoutY="46.0" selectionEnd="1" size="2em" />
                         <Label layoutX="30.0" layoutY="22.0" prefHeight="26.0" prefWidth="148.0" text="Enseignant:">
                            <font>
                               <Font size="24.0" />
@@ -234,7 +231,6 @@
                         <Button layoutX="585.0" layoutY="506.0" mnemonicParsing="false" onAction="#clearGuest" prefHeight="50.0" prefWidth="115.0" text="clear" />
                         <Label layoutX="58.0" layoutY="597.0" text="societe" />
                         <TextField fx:id="setsocieteInvite" layoutX="149.0" layoutY="593.0" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="307.0" layoutY="47.0" selectionEnd="0" size="2em" />
                         <Label layoutX="30.0" layoutY="28.0" text="Encadreur Invité:" />
                         <Label fx:id="msg4" layoutX="407.0" layoutY="585.0" prefHeight="22.0" prefWidth="356.0" />
                         <Label fx:id="msg5" layoutX="407.0" layoutY="616.0" prefHeight="22.0" prefWidth="356.0" />
@@ -272,7 +268,6 @@
                            </children>
                         </AnchorPane>
                         <TextField fx:id="searchFieldJury" alignment="CENTER" layoutX="313.0" layoutY="21.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="325.0" layoutY="46.0" size="2em" />
                         <Label layoutX="30.0" layoutY="28.0" text="Jury" />
                      </children>
                   </AnchorPane>
@@ -355,11 +350,10 @@
                            </children>
                         </AnchorPane>
                         <TextField fx:id="searchPFE" alignment="CENTER" layoutX="305.0" layoutY="24.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="315.0" layoutY="49.0" size="2em" />
                         <Label layoutX="30.0" layoutY="28.0" text="PFE" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="anc8" layoutX="-2.0" layoutY="12.0" prefHeight="679.0" prefWidth="895.0">
+                  <AnchorPane fx:id="anc8" layoutX="-2.0" layoutY="12.0" prefHeight="679.0" prefWidth="895.0" visible="false">
                      <children>
                         <AnchorPane fx:id="backgroundimage" layoutX="95.0" layoutY="191.0" prefHeight="354.0" prefWidth="710.0">
                            <children>
@@ -470,24 +464,11 @@
                                  </textFill>
                               </Label>
                               <ComboBox fx:id="soutenanceSalle" layoutX="214.0" layoutY="279.0" prefWidth="150.0" />
-                              <FontAwesomeIcon glyphName="CLOSE" layoutX="394.0" layoutY="55.0" onMouseClicked="#removeAjout" size="4em" wrappingWidth="49.428571701049805">
-                                 <fill>
-                                    <LinearGradient endX="1.0" endY="1.0">
-                                       <stops>
-                                          <Stop>
-                                             <color>
-                                                <Color red="0.046783626079559326" green="0.3684210479259491" blue="0.6315789222717285" />
-                                             </color>
-                                          </Stop>
-                                          <Stop offset="1.0">
-                                             <color>
-                                                <Color red="1.0" green="1.0" blue="1.0" />
-                                             </color>
-                                          </Stop>
-                                       </stops>
-                                    </LinearGradient>
-                                 </fill>
-                              </FontAwesomeIcon>
+                              <ImageView fitHeight="41.0" fitWidth="49.0" layoutX="379.0" layoutY="18.0" onMouseClicked="#removeAjout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logo1.png" />
+                                 </image>
+                              </ImageView>
                               <ComboBox fx:id="soutenanceheure" layoutX="214.0" layoutY="233.0" prefWidth="150.0" />
                               <Label fx:id="alert" layoutX="82.0" layoutY="324.0" prefHeight="22.0" prefWidth="284.0" textAlignment="CENTER" />
                            </children>
@@ -515,7 +496,6 @@
                            </children>
                         </AnchorPane>
                         <TextField fx:id="EtudientSearch1" alignment="CENTER" layoutX="302.0" layoutY="26.0" prefHeight="26.0" prefWidth="282.0" promptText="search" />
-                        <FontAwesomeIcon glyphName="SEARCH" layoutX="308.0" layoutY="51.0" selectionEnd="1" selectionFill="BLACK" size="2em" />
                         <Label layoutX="32.0" layoutY="32.0" prefHeight="26.0" prefWidth="148.0" text="Affichage:">
                            <font>
                               <Font size="24.0" />
